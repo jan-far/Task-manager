@@ -18,7 +18,6 @@ import Prompt from '../components/Promp';
 import {appDispatch} from '../redux/store';
 import {useSelector} from 'react-redux';
 import {selectTasks} from '../redux/app/appSelector';
-// import {Text} from 'react-native';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'TaskDetails'>;
 
@@ -70,6 +69,7 @@ const Details = ({navigation, route}: Props) => {
         justifyContent="space-around"
         position="absolute"
         w="100%"
+        zIndex={10}
         bottom="$2">
         <Button bgColor="green" onPress={() => editTask()}>
           <ButtonIcon mr="$3">
